@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  SwiftGenExample
+
+  Created by j.privezentsev on 02.08.2018.
+  Copyright © 2018 HeadHunter. All rights reserved.
+*/
+
+"main-screen.title" = "Язык";
+"main-screen.button.title" = "Посмотреть на Википедии";
+
+"languages.objective-c.name" = "Objective-C";
+"languages.objective-c.description" = "Компилируемый объектно-ориентированный язык программирования, используемый корпорацией Apple, построенный на основе языка Си и парадигм Smalltalk";
+"languages.objective-c.link" = "https://ru.wikipedia.org/wiki/Objective-C";
+
+"languages.swift.name" = "Swift";
+"languages.swift.description" = "Открытый мультипарадигмальный компилируемый язык программирования общего назначения";
+"languages.swift.link" = "https://ru.wikipedia.org/wiki/Swift_(\U044F\U0437\U044B\U043A_\U043F\U0440\U043E\U0433\U0440\U0430\U043C\U043C\U0438\U0440\U043E\U0432\U0430\U043D\U0438\U044F)";
