@@ -5,5 +5,6 @@ target 'SwiftGenExample' do
   use_frameworks!
 
   # Pods for SwiftGenExample
+  pod 'SwiftGen'
 
 end

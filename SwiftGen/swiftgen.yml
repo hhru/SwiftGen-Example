@@ -1,0 +1,16 @@
+xcassets:
+- paths: ../SwiftGenExample/Assets.xcassets
+  templatePath: Templates/ImageAssets.stencil
+  output: ../SwiftGenExample/Image.swift
+  params:
+    enumName: Image
+    publicAccess: 1
+    noAllValues: 1
+strings:
+- paths: ../SwiftGenExample/en.lproj/Localizable.strings
+  templatePath: Templates/LocalizableStrings.stencil
+  output: ../SwiftGenExample/Localization.swift
+  params:
+    enumName: Localization
+    publicAccess: 1
+    noComments: 0

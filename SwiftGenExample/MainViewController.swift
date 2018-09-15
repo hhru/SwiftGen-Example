@@ -32,15 +32,8 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = String(
-            format: NSLocalizedString("main-screen.title", comment: ""),
-            locale: Locale.current
-        )
-        let buttonTitle = String(
-            format: NSLocalizedString("main-screen.button.title", comment: ""),
-            locale: Locale.current
-        )
-        wikiButton.setTitle(buttonTitle, for: .normal)
+        title = localization.MainScreen.title
+        wikiButton.setTitle(localization.MainScreen.Button.title, for: .normal)
         setupWithLanguage(programmingLanguage)
     }
 
@@ -52,38 +45,21 @@ final class MainViewController: UIViewController {
 
     // MARK: - Setup
 
+    let logos = Image.Logos.self
+    let localization = Localization.self
+
     private func setupWithLanguage(_ language: ProgrammingLanguage) {
         switch language {
         case .Swift:
-            logoImageView.image = UIImage(named: "Swift")
-            nameLabel.text = String(
-                format: NSLocalizedString("languages.swift.name", comment: ""),
-                locale: Locale.current
-            )
-            descriptionLabel.text = String(
-                format: NSLocalizedString("languages.swift.description", comment: ""),
-                locale: Locale.current
-            )
-            let linkString = String(
-                format: NSLocalizedString("languages.swift.link", comment: ""),
-                locale: Locale.current
-            )
-            wikiUrl = linkString.toURL()
+            logoImageView.image = logos.swift
+            nameLabel.text = localization.Languages.Swift.name
+            descriptionLabel.text = localization.Languages.Swift.description
+            wikiUrl = localization.Languages.Swift.link.toURL()
         case .ObjectiveC:
-            logoImageView.image = UIImage(named: "ObjectiveC")
-            nameLabel.text = String(
-                format: NSLocalizedString("languages.objective-c.name", comment: ""),
-                locale: Locale.current
-            )
-            descriptionLabel.text = String(
-                format: NSLocalizedString("languages.objective-c.description", comment: ""),
-                locale: Locale.current
-            )
-            let linkString = String(
-                format: NSLocalizedString("languages.objective-c.link", comment: ""),
-                locale: Locale.current
-            )
-            wikiUrl = linkString.toURL()
+            logoImageView.image = logos.objectiveC
+            nameLabel.text = localization.Languages.ObjectiveC.name
+            descriptionLabel.text = localization.Languages.ObjectiveC.description
+            wikiUrl = localization.Languages.ObjectiveC.link.toURL()
         }
     }
 }

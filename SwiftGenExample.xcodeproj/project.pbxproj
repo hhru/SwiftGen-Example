@@ -11,6 +11,12 @@
 		B70A4BE3211327FD00EFA837 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B70A4BE2211327FD00EFA837 /* Assets.xcassets */; };
 		B70A4BE6211327FD00EFA837 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B70A4BE4211327FD00EFA837 /* LaunchScreen.storyboard */; };
 		B70A4BF121132E4100EFA837 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B70A4BEF21132E4100EFA837 /* Main.storyboard */; };
+		B73B19032114BC7800D7916F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73B19012114BC7700D7916F /* Image.swift */; };
+		B73B19042114BC7800D7916F /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73B19022114BC7800D7916F /* Localization.swift */; };
+		B77C0B49211870D2002E3025 /* runswiftgen.sh in Resources */ = {isa = PBXBuildFile; fileRef = B77C0B47211870D2002E3025 /* runswiftgen.sh */; };
+		B77C0B4A211870D2002E3025 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = B77C0B48211870D2002E3025 /* swiftgen.yml */; };
+		B77C0B4D211879C3002E3025 /* ImageAssets.stencil in Resources */ = {isa = PBXBuildFile; fileRef = B77C0B4B211879C3002E3025 /* ImageAssets.stencil */; };
+		B77C0B4E211879C3002E3025 /* LocalizableStrings.stencil in Resources */ = {isa = PBXBuildFile; fileRef = B77C0B4C211879C3002E3025 /* LocalizableStrings.stencil */; };
 		B7F69F91211345A300F213AF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7F69F93211345A300F213AF /* Localizable.strings */; };
 		B7F69F962113550300F213AF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F69F952113550300F213AF /* MainViewController.swift */; };
 		CA04DFCBD9AFB843ED2DF228 /* Pods_SwiftGenExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF540E57D8FA5094ED10B781 /* Pods_SwiftGenExample.framework */; };
@@ -24,6 +30,12 @@
 		B70A4BE5211327FD00EFA837 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B70A4BE7211327FD00EFA837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B70A4BF021132E4100EFA837 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B73B19012114BC7700D7916F /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		B73B19022114BC7800D7916F /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		B77C0B47211870D2002E3025 /* runswiftgen.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = runswiftgen.sh; sourceTree = "<group>"; };
+		B77C0B48211870D2002E3025 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
+		B77C0B4B211879C3002E3025 /* ImageAssets.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ImageAssets.stencil; sourceTree = "<group>"; };
+		B77C0B4C211879C3002E3025 /* LocalizableStrings.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LocalizableStrings.stencil; sourceTree = "<group>"; };
 		B7F69F92211345A300F213AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B7F69F94211345C400F213AF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B7F69F952113550300F213AF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +75,7 @@
 		B70A4BCF211327FD00EFA837 = {
 			isa = PBXGroup;
 			children = (
+				B73B18FF2114AC8500D7916F /* SwiftGen */,
 				B70A4BDA211327FD00EFA837 /* SwiftGenExample */,
 				B70A4BD9211327FD00EFA837 /* Products */,
 				0F0F7FD303C966D7DC650EEA /* Pods */,
@@ -81,6 +94,8 @@
 		B70A4BDA211327FD00EFA837 /* SwiftGenExample */ = {
 			isa = PBXGroup;
 			children = (
+				B73B19012114BC7700D7916F /* Image.swift */,
+				B73B19022114BC7800D7916F /* Localization.swift */,
 				B70A4BDB211327FD00EFA837 /* AppDelegate.swift */,
 				B7F69F952113550300F213AF /* MainViewController.swift */,
 				B70A4BEF21132E4100EFA837 /* Main.storyboard */,
@@ -92,6 +107,25 @@
 			path = SwiftGenExample;
 			sourceTree = "<group>";
 		};
+		B73B18FF2114AC8500D7916F /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				B77C0B47211870D2002E3025 /* runswiftgen.sh */,
+				B77C0B48211870D2002E3025 /* swiftgen.yml */,
+				B73B19002114AC9900D7916F /* Templates */,
+			);
+			path = SwiftGen;
+			sourceTree = "<group>";
+		};
+		B73B19002114AC9900D7916F /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				B77C0B4B211879C3002E3025 /* ImageAssets.stencil */,
+				B77C0B4C211879C3002E3025 /* LocalizableStrings.stencil */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,6 +134,7 @@
 			buildConfigurationList = B70A4BEA211327FD00EFA837 /* Build configuration list for PBXNativeTarget "SwiftGenExample" */;
 			buildPhases = (
 				89E2F3A6539B77E0A8BAAB34 /* [CP] Check Pods Manifest.lock */,
+				B73B18FD211466D200D7916F /* SwiftGen */,
 				B70A4BD4211327FD00EFA837 /* Sources */,
 				B70A4BD5211327FD00EFA837 /* Frameworks */,
 				B70A4BD6211327FD00EFA837 /* Resources */,
@@ -154,8 +189,12 @@
 			files = (
 				B70A4BF121132E4100EFA837 /* Main.storyboard in Resources */,
 				B7F69F91211345A300F213AF /* Localizable.strings in Resources */,
+				B77C0B49211870D2002E3025 /* runswiftgen.sh in Resources */,
 				B70A4BE6211327FD00EFA837 /* LaunchScreen.storyboard in Resources */,
 				B70A4BE3211327FD00EFA837 /* Assets.xcassets in Resources */,
+				B77C0B4A211870D2002E3025 /* swiftgen.yml in Resources */,
+				B77C0B4E211879C3002E3025 /* LocalizableStrings.stencil in Resources */,
+				B77C0B4D211879C3002E3025 /* ImageAssets.stencil in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +219,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B73B18FD211466D200D7916F /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT\"/SwiftGen/runswiftgen.sh \"$SRCROOT\" \"$PODS_ROOT\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -188,6 +241,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B70A4BDC211327FD00EFA837 /* AppDelegate.swift in Sources */,
+				B73B19032114BC7800D7916F /* Image.swift in Sources */,
+				B73B19042114BC7800D7916F /* Localization.swift in Sources */,
 				B7F69F962113550300F213AF /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
