@@ -1,14 +1,19 @@
-#!/bin/bash
+#!/bin/sh
 
-SRCROOT="$1"
-PODSROOT="$2"
+PODSROOT="$1"
+OUTPUT_FILES=( ${SCRIPT_OUTPUT_FILE_0} ${SCRIPT_OUTPUT_FILE_1} )
 
-if [ -f $SRCROOT/SwiftGenExample/Image.swift ]; then
-    chmod +w $SRCROOT/SwiftGenExample/Image.swift
-fi
-if [ -f $SRCROOT/SwiftGenExample/Localization.swift ]; then
-    chmod +w $SRCROOT/SwiftGenExample/Localization.swift
-fi
+for file in "${OUTPUT_FILES[@]}"
+do
+    if [ -f $file ]
+    then
+        chmod a=rw "$file"
+    fi
+done
+
 $PODSROOT/SwiftGen/bin/swiftgen config run --config SwiftGen/swiftgen.yml
-chmod -w $SRCROOT/SwiftGenExample/Image.swift
-chmod -w $SRCROOT/SwiftGenExample/Localization.swift
+
+for file in "${OUTPUT_FILES[@]}"
+do
+    chmod a=r "$file"
+done
