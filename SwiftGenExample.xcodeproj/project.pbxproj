@@ -225,13 +225,21 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/SwiftGen/runswiftgen.sh",
+				"$(SRCROOT)/SwiftGen/swiftgen.yml",
+				"$(SRCROOT)/SwiftGen/Templates/ImageAssets.stencil",
+				"$(SRCROOT)/SwiftGen/Templates/LocalizableStrings.stencil",
+				"$(SRCROOT)/SwiftGenExample/en.lproj/Localizable.strings",
+				"$(SRCROOT)/SwiftGenExample/Assets.xcassets",
 			);
 			name = SwiftGen;
 			outputPaths = (
+				"$(SRCROOT)/SwiftGenExample/Image.swift",
+				"$(SRCROOT)/SwiftGenExample/Localization.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/SwiftGen/runswiftgen.sh \"$SRCROOT\" \"$PODS_ROOT\"";
+			shellScript = "\"$SRCROOT\"/SwiftGen/runswiftgen.sh \"$PODS_ROOT\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
