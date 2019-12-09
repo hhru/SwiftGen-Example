@@ -1,7 +1,15 @@
 #!/bin/sh
 
 PODSROOT="$1"
-OUTPUT_FILES=( ${SCRIPT_OUTPUT_FILE_0} ${SCRIPT_OUTPUT_FILE_1} )
+OUTPUT_FILES=()
+
+COUNTER=0
+while [ $COUNTER -lt ${SCRIPT_OUTPUT_FILE_COUNT} ];
+do
+    tmp="SCRIPT_OUTPUT_FILE_$COUNTER"
+    OUTPUT_FILES+=(${!tmp})
+    COUNTER=$[$COUNTER+1]
+done
 
 for file in "${OUTPUT_FILES[@]}"
 do
